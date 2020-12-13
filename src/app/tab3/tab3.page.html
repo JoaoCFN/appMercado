@@ -1,16 +1,29 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Histórico de compras
-    </ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-title>
+            Histórico de compras
+        </ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <ion-header collapse="condense">
+        <ion-toolbar>
+            <ion-title size="large">Tab 3</ion-title>
+        </ion-toolbar>
+    </ion-header>
 
+
+    <!-- Pesquisa -->
+    <ion-item class="search-bar" lines="none">
+        <ion-input 
+            type="text" 
+            placeholder="Buscar uma lista"
+            class="ion-padding-left"
+        >
+        </ion-input>
+            <button clear item-right>
+            <ion-icon name="search"></ion-icon>
+        </button>
+    </ion-item>
 </ion-content>

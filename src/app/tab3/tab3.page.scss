@@ -1,0 +1,22 @@
+.search-bar{
+    --background: #fff;
+    color: #181725;
+    margin-top: 10px;
+
+    ion-input{
+        --padding-start: 16px;
+        border-radius: 16px 0 0 16px;
+    }
+
+    ion-input, button{
+        background-color: #F2F3F2;
+    }
+
+    button{
+        font-size: 18px;
+        height: 39px;
+        border-radius: 0px 16px 16px 0px;
+        padding-right: 14px;
+        outline: none;
+    }
+}

@@ -27,7 +27,7 @@ ion-content.home-page-content{
                 margin-bottom: 16px;
 
                 img{
-                    width: 24px;
+                    width: 22px;
                 }
     
                 ion-label{
@@ -49,10 +49,35 @@ ion-content.home-page-content{
 
             .d-grid{
                 display: grid;
-                grid-template-columns: 24px 50vw;
+                grid-template-columns: 22px 50vw;
                 align-items: center;
                 grid-gap: 1.5rem;
             }
+        }
+
+        .lista-compras-vazia{
+            padding-bottom: 10vh;
+        }
+    }
+
+    .search-bar{
+        margin-top: 10px;
+
+        ion-input{
+            --padding-start: 16px;
+            border-radius: 16px 0 0 16px;
+        }
+
+        ion-input, button{
+            background-color: #F2F3F2;
+        }
+
+        button{
+            font-size: 18px;
+            height: 39px;
+            border-radius: 0px 16px 16px 0px;
+            padding-right: 14px;
+            outline: none;
         }
     }
 }

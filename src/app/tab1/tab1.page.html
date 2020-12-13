@@ -13,9 +13,22 @@
         </ion-toolbar>
     </ion-header>
 
+    <!-- Pesquisa -->
+    <ion-item class="search-bar" lines="none">
+        <ion-input 
+            type="text" 
+            placeholder="Buscar uma lista"
+            class="ion-padding-left"
+        >
+        </ion-input>
+        <button clear item-right>
+            <ion-icon name="search"></ion-icon>
+        </button>
+    </ion-item>
+
     <!-- Carrinho vazio -->
     <ion-grid>
-        <ion-row class="ion-justify-content-center">
+        <ion-row class="ion-justify-content-center lista-compras-vazia">
             <ion-col class="ion-align-self-center" size="12">
                 <div>
                     <img src="assets/img/cart.svg" alt="Carrinho"/>
