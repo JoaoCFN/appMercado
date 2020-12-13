@@ -11,5 +11,49 @@ ion-content.home-page-content{
     h4{
         color: #7C7C7C;
     }
+
+    ion-item{
+        --background: #fff;
+        color:  #181725;
+    }
+
+    ion-grid{
+        .lista-compras-home{
+            margin: 16px auto;
+            border-bottom: 1px solid  #acacac;
+            height: auto;
+
+            .lista-compras-item{
+                margin-bottom: 16px;
+
+                img{
+                    width: 24px;
+                }
+    
+                ion-label{
+                    color: #181725;
+                    font-size: 18px;
+                    font-weight: 700;
+                }
+
+                small{
+                    color: #898888;
+                }
+            }
+
+            .d-flex{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .d-grid{
+                display: grid;
+                grid-template-columns: 24px 50vw;
+                align-items: center;
+                grid-gap: 1.5rem;
+            }
+        }
+    }
 }
 
