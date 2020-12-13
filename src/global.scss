@@ -24,3 +24,22 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+// Estilos globais
+ion-header{
+    ion-toolbar{
+        --background: #fff;
+        color: #181725;
+        text-align: center;
+    }
+}
+
+ion-content{
+    --ion-background-color: #fff;
+    text-align: center;
+
+    ion-grid, ion-row{
+        height: 100%;
+    }
+}
+

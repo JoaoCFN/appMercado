@@ -1,15 +1,4 @@
-ion-header.home-page-header{
-    ion-toolbar{
-        --background: #fff;
-        color: #181725;
-        text-align: center;
-    }
-}
-
 ion-content.home-page-content{
-    --ion-background-color: #fff;
-    text-align: center;
-
     img{
         width: 190px;
         height: auto;
@@ -21,10 +10,6 @@ ion-content.home-page-content{
 
     h4{
         color: #7C7C7C;
-    }
-
-    ion-grid, ion-row{
-        height: 100%;
     }
 }
 
