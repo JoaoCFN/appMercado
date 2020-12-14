@@ -1,22 +1,111 @@
-.search-bar{
-    --background: #fff;
-    color: #181725;
-    margin-top: 10px;
-
-    ion-input{
-        --padding-start: 16px;
-        border-radius: 16px 0 0 16px;
+ion-content.history-page-content{
+    img{
+        width: 190px;
+        height: auto;
     }
 
-    ion-input, button{
-        background-color: #F2F3F2;
+    h2{
+        color: #181725;
     }
 
-    button{
-        font-size: 18px;
-        height: 39px;
-        border-radius: 0px 16px 16px 0px;
-        padding-right: 14px;
-        outline: none;
+    h4{
+        color: #7C7C7C;
+    }
+
+    ion-item{
+        --background: #fff;
+        color:  #181725;
+    }
+
+    ion-grid{
+        .lista-compras-history{
+            margin: 16px auto;
+            border-bottom: 1px solid  #acacac;
+            height: auto;
+
+            .lista-compras-item{
+                margin-bottom: 16px;
+
+                img{
+                    width: 22px;
+                }
+    
+                ion-label{
+                    color: #181725;
+                    font-size: 18px;
+                    font-weight: 700;
+
+                    .small-text{
+                        font-size: 11px;
+                        font-weight: 100;
+                    }
+                }
+
+                small{
+                    color: #898888;
+                }
+
+                button{
+                    outline: none;
+                }
+
+                .btn-view{
+                    color: #637BFE;
+                    background: transparent;
+                    font-size: 24px;
+                }
+
+                .btn-remove{
+                    color: #E71414;
+                    background: transparent;
+                    font-size: 24px;
+                }
+            }
+
+            .d-flex{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .d-grid{
+                display: grid;
+                grid-template-columns: 22px 50vw;
+                align-items: center;
+                grid-gap: 1rem;
+            }
+
+            .d-grid-t{
+                display: grid;
+                grid-template-columns: 30px 1fr;
+                align-items: center;
+                grid-gap: .8rem;
+            }
+        }
+
+        .lista-compras-vazia{
+            padding-bottom: 10vh;
+        }
+    }
+
+    .search-bar{
+        margin-top: 10px;
+
+        ion-input{
+            --padding-start: 16px;
+            border-radius: 16px 0 0 16px;
+        }
+
+        ion-input, button{
+            background-color: #F2F3F2;
+        }
+
+        button{
+            font-size: 18px;
+            height: 39px;
+            border-radius: 0px 16px 16px 0px;
+            padding-right: 14px;
+            outline: none;
+        }
     }
 }
