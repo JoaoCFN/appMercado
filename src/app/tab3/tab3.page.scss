@@ -75,7 +75,7 @@ ion-content.history-page-content{
                 grid-gap: 1rem;
             }
 
-            .d-grid-t{
+            .d-grid-history{
                 display: grid;
                 grid-template-columns: 30px 1fr;
                 align-items: center;
@@ -107,5 +107,9 @@ ion-content.history-page-content{
             padding-right: 14px;
             outline: none;
         }
+    }
+
+    .history-empty{
+        padding-bottom: 10vh;
     }
 }

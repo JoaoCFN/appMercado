@@ -28,8 +28,25 @@
         </button>
     </ion-item>
 
-    <!-- Histórico  com itens -->
+    <!-- Histórico vazio -->
     <ion-grid>
+        <ion-row class="ion-justify-content-center history-empty">
+            <ion-col class="ion-align-self-center" size="12">
+                <div>
+                    <img src="assets/img/history.svg" alt="Carrinho"/>
+                    
+                    <h2>Seu histórico ainda está vazio</h2>
+
+                    <h4>
+                        Que tal irmos as compras?
+                    </h4>
+                </div>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+    <!-- Histórico com itens -->
+    <!-- <ion-grid>
         <ion-row class="ion-justify-content-center lista-compras-history">
             <ion-col class="d-flex lista-compras-item" size="11">
                <div class="d-grid">
@@ -51,10 +68,7 @@
                     </ion-label>
                </div>
 
-               <div class="d-grid-t">
-                    <!-- <small>
-                        13/12/2020
-                    </small> -->
+               <div class="d-grid-history">
                     <button class="btn-view">
                         <ion-icon name="eye-outline"></ion-icon>
                     </button>
@@ -64,5 +78,5 @@
                </div>             
             </ion-col>
         </ion-row>
-    </ion-grid>
+    </ion-grid> -->
 </ion-content>
