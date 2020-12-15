@@ -1,18 +1,193 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Lista de compras
-    </ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-title>
+            Lista de compras
+        </ion-title>
+    </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">
-        Lista de compras
-      </ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" class="shop-list-content">
+    <ion-header collapse="condense">
+        <ion-toolbar>
+            <ion-title size="large">
+                Lista de compras
+            </ion-title>
+        </ion-toolbar>
+    </ion-header>
+
+    <ion-list class="form-field">
+        <ion-item lines="none">
+            <ion-label>
+                Dê um nome a sua lista
+            </ion-label>
+            
+        </ion-item>
+        <ion-input 
+            type="text" 
+            placeholder="Digite o nome da lista"
+        >
+        </ion-input>
+    </ion-list>
+
+    <ion-list class="form-field">
+        <ion-item lines="none">
+            <ion-label>
+                Comece a adicionar produtos
+            </ion-label>
+            
+        </ion-item>
+        <ion-input 
+            type="text" 
+            placeholder="Digite aqui o nome do produto"
+        >
+        </ion-input>
+    </ion-list>
+
+    <!-- Inputs adicionar valores -->
+    <ion-grid class="form-field-col">
+        <ion-row>
+            <ion-col size="2">
+                <button>
+                    <ion-icon name="remove"></ion-icon>
+                </button>
+            </ion-col>
+            <ion-col size="4">
+                <ion-input 
+                    type="text" 
+                    placeholder="100"
+                >
+                </ion-input>
+            </ion-col>
+            <ion-col size="2">
+                <button>
+                    <ion-icon name="add"></ion-icon>
+                </button>     
+            </ion-col>
+            <ion-col size="4">
+                <ion-input 
+                    type="text" 
+                    placeholder="KG"
+                >
+                </ion-input>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+    <!-- Botão adicionar -->
+    <ion-grid>
+        <ion-row>
+            <ion-col size="12">
+                <button class="btn-green">
+                    Adicionar
+                </button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+    <!-- Produtos -->
+    <ion-grid>
+        <ion-row class="ion-justify-content-center ion-align-items-center shop-list-item">
+            <ion-col size="3">
+                <div>
+                    Feijão
+                </div>
+            </ion-col>
+            <ion-col size="4">
+                <div>
+                    <span>3 KG</span>
+                </div>
+            </ion-col>
+            <ion-col size="4">
+                <div class="d-grid">
+                    <button class="btn-view">
+                        <ion-icon name="create-outline"></ion-icon>
+                    </button>
+                    <button class="btn-remove">
+                        <ion-icon name="trash-outline"></ion-icon>
+                    </button>
+               </div>  
+            </ion-col>
+        </ion-row>
+
+        <ion-row class="ion-justify-content-center ion-align-items-center shop-list-item">
+            <ion-col size="3">
+                <div>
+                    Arroz
+                </div>
+            </ion-col>
+            <ion-col size="4">
+                <div>
+                    <span>3 KG</span>
+                </div>
+            </ion-col>
+            <ion-col size="4">
+                <div class="d-grid">
+                    <button class="btn-view">
+                        <ion-icon name="create-outline"></ion-icon>
+                    </button>
+                    <button class="btn-remove">
+                        <ion-icon name="trash-outline"></ion-icon>
+                    </button>
+               </div>  
+            </ion-col>
+        </ion-row>
+
+        <ion-row class="ion-justify-content-center ion-align-items-center shop-list-item">
+            <ion-col size="3">
+                <div>
+                    Miojo
+                </div>
+            </ion-col>
+            <ion-col size="4">
+                <div>
+                    <span>1 CX</span>
+                </div>
+            </ion-col>
+            <ion-col size="4">
+                <div class="d-grid">
+                    <button class="btn-view">
+                        <ion-icon name="create-outline"></ion-icon>
+                    </button>
+                    <button class="btn-remove">
+                        <ion-icon name="trash-outline"></ion-icon>
+                    </button>
+               </div>  
+            </ion-col>
+        </ion-row>
+
+        <ion-row class="ion-justify-content-center ion-align-items-center shop-list-item">
+            <ion-col size="3">
+                <div>
+                    Nescau
+                </div>
+            </ion-col>
+            <ion-col size="4">
+                <div>
+                    <span>5 UND</span>
+                </div>
+            </ion-col>
+            <ion-col size="4">
+                <div class="d-grid">
+                    <button class="btn-view">
+                        <ion-icon name="create-outline"></ion-icon>
+                    </button>
+                    <button class="btn-remove">
+                        <ion-icon name="trash-outline"></ion-icon>
+                    </button>
+               </div>  
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+    <!-- Botão finalizar -->
+    <ion-grid>
+        <ion-row>
+            <ion-col size="12">
+                <button class="btn-green">
+                    Finalizar e salvar lista
+                </button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
 
 </ion-content>
