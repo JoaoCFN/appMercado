@@ -54,9 +54,19 @@ ion-content.shop-list-content{
         }
     }
 
-    .btn-green{
+    .btn-yellow{
         padding: 10px 24px;
-        background: #34c068;
+        background:rgb(219, 219, 0);
+        color: #F2F3F2;
+        border-radius: 8px;
+        font-size: 18px;
+        font-weight: 700;
+        width: 100%;
+        outline: none;
+    }
+    .btn-ciano{
+        padding: 10px 24px;
+        background: rgb(138, 212, 247);
         color: #F2F3F2;
         border-radius: 8px;
         font-size: 18px;
@@ -94,55 +104,14 @@ ion-content.shop-list-content{
                 justify-content: end;
                 align-items: center;
             }
-            .price{
-                background-color: #d1d1d1;
-                border-radius: 4px;
-                height: 20px;
-                width: 45px;
-            }
-            
-            
         }
     }
-    div.val-text{
-        display: flex;
-        justify-content: left;
-        margin-left: 30px;
-    }
-    div.val-price{
-        background-color: #d1d1d1;
-        border-radius: 4px;
-        height: 100%;
-        width: 80px;
-        display: flex;
-    }
-    input{
-        background-color: #d1d1d1;
-        border-radius: 4px;
-        height: 100%;
-        width: 45px;
-        outline: 0;
-        border: none;
-    }
-    ion-row.conteudo{
-        margin-top: 60px;
-    }
-    button.btn-green.btn-ajust{
-        position: relative;
-        margin-top: 100px;
-        bottom: 0%;
-    }
+
 
     ion-grid, ion-row{
         height: auto;
-        margin-top: 10px;
     }
-    ion-checkbox{
-        --border-color-checked: none;
-        --border-style: none;
-        --checkmark-color: green;
-        --background-checked: #d1d1d1;
-        --background: #d1d1d1;
-        --size: 20px
+    ion-grid.bottom-g{
+        margin-top: 70%;
     }
 }
