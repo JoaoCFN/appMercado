@@ -38,13 +38,30 @@ require_once "scripts/config.php";
     }
 );
 
-// POST route
-$app->post(
-    '/post',
-    function () {
-        echo 'This is a POST route';
+$app->get('/lista_compra', 
+    function(){
+    require_once "routes/lista_copmpra.php";
     }
 );
+
+// POST route
+
+$app->post('/inserir_lista', function($nome, $unidade, $valor){
+
+    $local_db = '../../dbapp.db';
+    $con = new SQLite3($local_db);
+    $query = ("INSERT into lista_compras (nome_produto,unidade_medida,ultimo_valor) values ($nome, $unidade, $valor)");
+    $con ->exec($query);
+    if ($query){
+        echo ('gg');
+    }else{
+        echo ('wp');
+    }
+    
+    echo ($local_db);
+});
+
+
 
 // PUT route
 $app->put(
