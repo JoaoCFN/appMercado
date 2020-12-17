@@ -39,12 +39,26 @@ $app->get(
     }
 );
 
+$app->post(
+    '/inserir_nova_lista',
+    function () {
+       require_once "routes/inserir_lista.php";
+    }
+);
+
 $app->get(
+    '/listar_listas',
+    function () {
+        require_once "routes/listar_listas.php";
+    }
+);
+
+/*$app->get(
     '/lista_compra',
     function () {
         require_once "routes/lista_compra.php";
     }
-);
+);*/
 
 // POST route
 
