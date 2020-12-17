@@ -14,7 +14,7 @@ export class Tab2Page {
   public produto: Produto = new Produto();
 
   constructor(
-    public listaService: ListaService = new ListaService()
+    // public listaService: ListaService = new ListaService()
   ) {}
 
   addValor(){
@@ -33,7 +33,7 @@ export class Tab2Page {
   }
 
   criarLista(){
-    const retorno = this.listaService.inserirLista(this.listaCompras);
-    console.log(retorno);
+    // const retorno = this.listaService.inserirLista(this.listaCompras);
+    // console.log(retorno);
   }
 }
