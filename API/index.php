@@ -53,6 +53,22 @@ $app->get(
     }
 );
 
+$app->get(
+    '/deletar_lista',
+    function () {
+        require_once "routes/deletar_lista.php";
+    }
+);
+
+$app->post(
+    '/finalizar_compra',
+    function () {
+        require_once "routes/finalizar_compra.php";
+    }
+);
+
+
+
 /*$app->get(
     '/lista_compra',
     function () {
