@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Step 1: Require the Slim Framework
  *
@@ -10,7 +11,7 @@
 require 'Slim/Slim.php';
 
 \Slim\Slim::registerAutoloader();
-    
+
 /**
  * Step 2: Instantiate a Slim application
  *
@@ -34,30 +35,31 @@ $app = new \Slim\Slim();
 $app->get(
     '/',
     function () {
-require_once "scripts/config.php";
+        require_once "scripts/all.php";
     }
 );
 
-$app->get('/lista_compra', 
-    function(){
-    require_once "routes/lista_copmpra.php";
+$app->get(
+    '/lista_compra',
+    function () {
+        require_once "routes/lista_compra.php";
     }
 );
 
 // POST route
 
-$app->post('/inserir_lista', function($nome, $unidade, $valor){
+$app->post('/inserir_lista', function ($nome, $unidade, $valor) {
 
     $local_db = '../../dbapp.db';
     $con = new SQLite3($local_db);
     $query = ("INSERT into lista_compras (nome_produto,unidade_medida,ultimo_valor) values ($nome, $unidade, $valor)");
-    $con ->exec($query);
-    if ($query){
+    $con->exec($query);
+    if ($query) {
         echo ('gg');
-    }else{
+    } else {
         echo ('wp');
     }
-    
+
     echo ($local_db);
 });
 

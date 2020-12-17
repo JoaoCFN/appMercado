@@ -1,15 +1,13 @@
 <?php 
-$local_db = '../../dbapp.db';
-$con = new SQLite3($local_db);
-$query = ("SELECT * from compra WHERE status = ?");
-$con ->exec($query);
-
+#require_once "API/scripts/config.php";
+$con = new PDO('sqlite:../../dbapp.db');
+$select = ("SELECT * from compra");
+$query = $con ->query($select);
 if ($query){
     echo ('gg');
 }else{
     echo ('wp');
 }
 
-echo ($local_db);
 
 ?>
