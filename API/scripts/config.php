@@ -1,15 +1,15 @@
-<?php 
-$local_db = '../../dbapp.db';
-$con = new SQLite3($local_db);
-$query = ("INSERT into compra (nome_lista,valor_total,status) values ('Lista de Testes','450','Pendente')");
-$con ->exec($query);
+<?php
+#$con = new PDO('sqlite: ../../dbapp.db'); 
+#$insert = ("SELECT * from compra");
+#$query = $con->query($insert);
+// Cria uma conexão com o banco de dados indicado no caminho
+$myPDO = new PDO('sqlite:../dbapp.db');
 
-if ($query){
+$result = $myPDO->query("SELECT * FROM compra");
+if ($result) {
     echo ('gg');
-}else{
+} else {
     echo ('wp');
 }
 
-echo ($local_db);
-
-?>
+#echo ($local_db);
