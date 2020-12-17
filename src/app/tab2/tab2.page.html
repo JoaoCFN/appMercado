@@ -19,11 +19,11 @@
             <ion-label>
                 Dê um nome a sua lista
             </ion-label>
-            
         </ion-item>
         <ion-input 
             type="text" 
             placeholder="Digite o nome da lista"
+            [(ngModel)]="listaCompras.nomeLista"
         >
         </ion-input>
     </ion-list>
@@ -38,6 +38,7 @@
         <ion-input 
             type="text" 
             placeholder="Digite aqui o nome do produto"
+            [(ngModel)]="produto.nome"
         >
         </ion-input>
     </ion-list>
@@ -46,26 +47,30 @@
     <ion-grid class="form-field-col">
         <ion-row>
             <ion-col size="2">
-                <button>
+                <button (click)="removeValor()">
                     <ion-icon name="remove"></ion-icon>
                 </button>
             </ion-col>
             <ion-col size="4">
+                <!-- Valor -->
                 <ion-input 
-                    type="text" 
+                    type="number" 
                     placeholder="100"
+                    [(ngModel)]="produto.quantidade"
                 >
                 </ion-input>
             </ion-col>
             <ion-col size="2">
-                <button>
+                <button (click)="addValor()">
                     <ion-icon name="add"></ion-icon>
                 </button>     
             </ion-col>
             <ion-col size="4">
+                <!-- Unidade de medida -->
                 <ion-input 
                     type="text" 
-                    placeholder="KG"
+                    placeholder="Ex: KG"
+                    [(ngModel)]="produto.unidadeMedida"
                 >
                 </ion-input>
             </ion-col>
@@ -76,7 +81,7 @@
     <ion-grid>
         <ion-row>
             <ion-col size="12">
-                <button class="btn-green">
+                <button class="btn-green" (click)="adicionarProduto(produto)">
                     Adicionar
                 </button>
             </ion-col>
@@ -85,15 +90,20 @@
 
     <!-- Produtos -->
     <ion-grid>
-        <ion-row class="ion-justify-content-center ion-align-items-center shop-list-item">
+        <ion-row 
+            class="ion-justify-content-center ion-align-items-center shop-list-item"
+            *ngFor="let produto of listaCompras.listaProduto"
+        >
             <ion-col size="3">
                 <div>
-                    Feijão
+                    {{ produto.nome }}
                 </div>
             </ion-col>
             <ion-col size="4">
                 <div>
-                    <span>3 KG</span>
+                    <span>
+                        {{ produto.quantidade }} {{ produto.unidadeMedida }}
+                    </span>
                 </div>
             </ion-col>
             <ion-col size="4">
@@ -108,7 +118,7 @@
             </ion-col>
         </ion-row>
 
-        <ion-row class="ion-justify-content-center ion-align-items-center shop-list-item">
+        <!-- <ion-row class="ion-justify-content-center ion-align-items-center shop-list-item">
             <ion-col size="3">
                 <div>
                     Arroz
@@ -175,14 +185,14 @@
                     </button>
                </div>  
             </ion-col>
-        </ion-row>
+        </ion-row> -->
     </ion-grid>
 
     <!-- Botão finalizar -->
     <ion-grid>
         <ion-row>
             <ion-col size="12">
-                <button class="btn-green">
+                <button class="btn-green" (click)="criarLista()">
                     Finalizar e salvar lista
                 </button>
             </ion-col>
