@@ -1,23 +1,27 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Lista } from 'src/models/Lista';
-import { Observable } from 'rxjs';
+import { Injectable } from "@angular/core";
+
+import { Lista } from "src/models/Lista";
+import { Observable } from "rxjs";
+import { HttpClient } from "@angular/common/http";
 
 @Injectable({
-    'providedIn': 'root',
+  providedIn: "root",
 })
+export class ListaService {
+    
+  // public _http: HttpClient;
+  //public apiUrl: string = "http://localhost/appMercado/API/inserir_nova_lista";
+  private apiUrl: string = "http://localhost/appMercado/API/listar_listas";
 
-export class ListaService{
-    // public _http: HttpClient;
-    public apiUrl: string = "http://localhost/appMercado/API/inserir_nova_lista";
+  constructor(private http: HttpClient) {}
 
-    constructor(private _http: HttpClient){
-    }
 
-    inserirLista(lista): Observable<Lista>{
-        console.log(this._http);
-        console.log(this.apiUrl);
-        console.log(lista);
-        return this._http.post<Lista>(this.apiUrl, lista);
-    }
+  
+  listarListas() {
+    return this.http.get(this.apiUrl + '?listar_tudo=0');
+  }
+
+  inserirLista(lista): Observable<Lista> {
+    return this.http.post<Lista>(this.apiUrl, lista);
+  }
 }
