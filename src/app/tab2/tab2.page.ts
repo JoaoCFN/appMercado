@@ -13,9 +13,12 @@ export class Tab2Page {
   public listaCompras: Lista = new Lista();
   public produto: Produto = new Produto();
 
-  constructor(
-    public listaService: ListaService = new ListaService()
-  ) {}
+  constructor(private listaService: ListaService) {}
+
+
+  ngOnInit() {
+    this.listaService.listarListas().subscribe(console.log)
+  }
 
   addValor(){
     this.produto.quantidade += 1;
